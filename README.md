@@ -52,7 +52,8 @@ There is no external ETL tool involved — ingestion, transformation, and qualit
 
 The warehouse follows the **medallion architecture**: raw, cleaned, and business-ready data are kept in separate schemas rather than mixed together.
 
-![Medallion Layer Comparison](docs/medallion_comparison.png)
+<img width="901" height="474" alt="data_flow" src="https://github.com/user-attachments/assets/63e0603c-8729-448a-8d2a-7f5971eda36c" />
+
 
 | Layer | Purpose | Object Type | Load Strategy |
 |---|---|---|---|
@@ -66,7 +67,7 @@ Bronze is never modified in place. If a transformation in Silver produces an une
 
 Each source table is cleaned independently through Bronze and Silver, then joined for the first time in Gold to produce the final dimension and fact tables:
 
-![Data Flow Diagram](docs/data_flow_diagram.png)
+<img width="901" height="474" alt="data_flow" src="https://github.com/user-attachments/assets/53f8ef3e-3be8-4c47-8845-d77d9d09218b" />
 
 ## Data Model
 
