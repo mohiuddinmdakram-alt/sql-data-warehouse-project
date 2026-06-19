@@ -52,7 +52,7 @@ There is no external ETL tool involved — ingestion, transformation, and qualit
 
 The warehouse follows the **medallion architecture**: raw, cleaned, and business-ready data are kept in separate schemas rather than mixed together.
 
-<img width="901" height="474" alt="data_flow" src="https://github.com/user-attachments/assets/63e0603c-8729-448a-8d2a-7f5971eda36c" />
+<img width="896" height="512" alt="medallion_architecture_comparison" src="https://github.com/user-attachments/assets/bbe9b459-f09c-4b2f-9959-c98bc6329653" />>
 
 
 | Layer | Purpose | Object Type | Load Strategy |
