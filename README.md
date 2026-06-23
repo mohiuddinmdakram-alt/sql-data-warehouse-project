@@ -1,6 +1,6 @@
 # SQL Data Warehouse
 
-A SQL Server data warehouse that integrates CRM and ERP sales data into a single, analytics-ready star schema using a Bronze / Silver / Gold (medallion) architecture. Every layer — ingestion, cleansing, modeling, and testing — is implemented in T-SQL.
+A SQL Server data warehouse that integrates CRM and ERP sales data into a single, analytics-ready star schema using a Bronze / Silver / Gold (medallion) architecture. Every layer ingestion, cleansing, modeling, and testing is implemented in T-SQL.
 
 ![SQL Server](https://img.shields.io/badge/Database-SQL%20Server-CC2927?style=flat&logo=microsoftsqlserver&logoColor=white)
 ![T-SQL](https://img.shields.io/badge/Language-T--SQL-4479A1?style=flat)
@@ -28,7 +28,7 @@ A SQL Server data warehouse that integrates CRM and ERP sales data into a single
 
 ## Overview
 
-Two source systems feed this warehouse: a **CRM** (customers, products, sales transactions) and an **ERP** (customer demographics, location, product categories). Neither system is reliable or complete on its own — keys are formatted differently, some fields conflict between systems, and the data needs cleansing before it can be trusted.
+Two source systems feed this warehouse: a **CRM** (customers, products, sales transactions) and an **ERP** (customer demographics, location, product categories). Neither system is reliable or complete on its own keys are formatted differently, some fields conflict between systems, and the data needs cleansing before it can be trusted.
 
 This repository builds a SQL Server warehouse that resolves that in three stages:
 
@@ -36,7 +36,7 @@ This repository builds a SQL Server warehouse that resolves that in three stages
 2. **Silver** — data cleaned, standardized, and validated against explicit business rules.
 3. **Gold** — Bronze/Silver tables integrated into a conformed star schema, exposed as views.
 
-There is no external ETL tool involved — ingestion, transformation, and quality checks are all plain T-SQL, runnable end-to-end from SSMS.
+There is no external ETL tool involved —ingestion, transformation, and quality checks are all plain T-SQL, runnable end-to-end from SSMS.
 
 ## Highlights
 
